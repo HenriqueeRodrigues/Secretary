@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Model.Pessoa;
 using Model.Produto;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace Data.Config
         }
 
         public DbSet<ProdutoViewModel> ProdutoViewModel { get; set; }
+        public DbSet<PessoaViewModel> PessoaViewModel { get; set; }
 
         private string GetStringConectionConfig()
         {

@@ -1,5 +1,7 @@
 using Business.InterfaceGenerica;
+using Business.InterfacePessoa;
 using Business.InterfaceProduto;
+using Data.PessoaRepositorio;
 using Data.ProdutoRepositorio;
 using Data.RepositorioGenerico;
 using Microsoft.AspNetCore.Builder;
@@ -39,6 +41,7 @@ namespace WebAPI
 
             services.AddSingleton(typeof(IGeneric<>), typeof(RepositoryGenerics<>));
             services.AddSingleton<IProduto, RepositorioProduto>();
+            services.AddSingleton<IPessoa, RepositorioPessoa>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
