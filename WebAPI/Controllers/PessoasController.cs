@@ -19,6 +19,7 @@ namespace WebAPI.Controllers
 
         [HttpGet("ListarPessoas")]
         public async Task<IActionResult> ListarPessoas()
+        
         {
             return Json(await _IPessoa.List());
         }
