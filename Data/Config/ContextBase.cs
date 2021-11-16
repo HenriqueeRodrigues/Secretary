@@ -34,6 +34,7 @@ namespace Data.Config
         private string GetStringConectionConfig()
         {
             string strCon = "Server=(localdb)\\MSSQLLocalDB;Database=Henrique;Trusted_Connection=True;";
+
             return strCon;
         }
     }
