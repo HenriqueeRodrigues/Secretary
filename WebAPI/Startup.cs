@@ -40,8 +40,8 @@ namespace WebAPI
             });
 
             services.AddSingleton(typeof(IGeneric<>), typeof(RepositoryGenerics<>));
-            services.AddSingleton<IProduto, RepositorioProduto>();
             services.AddSingleton<IPessoa, RepositorioPessoa>();
+            services.AddSingleton<IProduto, RepositorioProduto>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

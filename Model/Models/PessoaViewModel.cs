@@ -1,23 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Model.Pessoa
 {
-    [Table("Pessoa")]
+
+    [Table("PESSOA")]
+
     public class PessoaViewModel
     {
-        [Column("PessoaId")]
-        public int Id { get; set; }
 
-        [Required]
-        [MaxLength(500)]
+        [Column("PessoaId")]
+        [Key]
+        [Display(Name = "Código")]
+        public int PessoaId { get; set; }
+
+        [Column("NOME")]
+        [Display(Name = "Nome")]
+        [MaxLength(255)]
         public string Nome { get; set; }
+      
 
         [MaxLength(500)]
         public string Endereco { get; set; }
@@ -25,7 +28,6 @@ namespace Model.Pessoa
         [MaxLength(500)]
         public int Idade { get; set; }
 
-        [Required]
         [DefaultValue(false)]
         public bool ÉBatizado { get; set; }
 

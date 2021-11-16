@@ -3,11 +3,6 @@ using Data.Config;
 using Data.RepositorioGenerico;
 using Microsoft.EntityFrameworkCore;
 using Model.Produto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data.ProdutoRepositorio
 {

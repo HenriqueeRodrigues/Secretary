@@ -26,6 +26,8 @@ namespace Data.Config
             }
         }
 
+
+
         public DbSet<ProdutoViewModel> ProdutoViewModel { get; set; }
         public DbSet<PessoaViewModel> PessoaViewModel { get; set; }
 

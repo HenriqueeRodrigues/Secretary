@@ -1,10 +1,6 @@
 ﻿using Business.InterfaceProduto;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Model.Produto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
@@ -26,6 +22,7 @@ namespace WebAPI.Controllers
         {
             return Json(await _IProduto.List());
         }
+
 
         [HttpPost("ObterProdutoPorId")]
         public async Task<IActionResult> ObterProdutoPorId(int Id)
