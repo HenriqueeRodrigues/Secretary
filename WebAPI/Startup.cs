@@ -1,6 +1,7 @@
 using Business.InterfaceGenerica;
 using Business.InterfacePessoa;
 using Business.InterfaceProduto;
+using Data.Config;
 using Data.PessoaRepositorio;
 using Data.ProdutoRepositorio;
 using Data.RepositorioGenerico;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -42,11 +44,17 @@ namespace WebAPI
             services.AddSingleton(typeof(IGeneric<>), typeof(RepositoryGenerics<>));
             services.AddSingleton<IPessoa, RepositorioPessoa>();
             services.AddSingleton<IProduto, RepositorioProduto>();
+            services.AddDbContext<ContextBase>(x => x.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Henrique;Trusted_Connection=True;", y => y.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            using var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
+            var databaseRepositoryContext = scope.ServiceProvider.GetService<ContextBase>();
+            databaseRepositoryContext.Database.Migrate();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,16 +21,35 @@ namespace Model.Pessoa
         [Display(Name = "Nome")]
         [MaxLength(255)]
         public string Nome { get; set; }
-      
+
+        [Required]
+        [MaxLength(255)]
+        public string SobreNome { get; set; }
+
+        [Required]
+        public DateTime DataNascimento { get; set; }
+
+        public DateTime Databatismo { get; set; }
+
+
+        [DefaultValue(false)]
+        public bool Anciao { get; set; }
+
+        [DefaultValue(false)]
+        public bool ServoMinisterial { get; set; }
+
+        [DefaultValue(false)]
+        public bool PioneiroRegular { get; set; }
+
+        [DefaultValue(false)]
+        public bool Ungido { get; set; }
+
 
         [MaxLength(500)]
         public string Endereco { get; set; }
 
         [MaxLength(500)]
-        public int Idade { get; set; }
-
-        [DefaultValue(false)]
-        public bool ÉBatizado { get; set; }
+        public string Congregacao { get; set; }
 
     }
 }

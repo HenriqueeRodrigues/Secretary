@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Model.Pessoa;
 using Model.Produto;
 using System;
 using System.Collections.Generic;
@@ -9,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace Data.Config
 {
-    class ContextBase : DbContext
+    public class ContextBase : DbContext
     {
+
 
         public ContextBase(DbContextOptions<ContextBase> options) : base(options)
         {
-            Database.EnsureCreated();
+            // Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -26,10 +26,8 @@ namespace Data.Config
             }
         }
 
-
-
         public DbSet<ProdutoViewModel> ProdutoViewModel { get; set; }
-        public DbSet<PessoaViewModel> PessoaViewModel { get; set; }
+        public DbSet<Model.Pessoa.PessoaViewModel> PessoaViewModel { get; set; }
 
         private string GetStringConectionConfig()
         {
