@@ -17,34 +17,34 @@ namespace WebAPI.Controllers
             _IPessoa = IPessoa;
         }
 
-        [HttpGet("ListarPessoas")]
+        [HttpGet]
         public async Task<IActionResult> ListarPessoas()
         {
             return Json(await _IPessoa.List());
         }
 
-        [HttpPost("ObterPessoaPorId")]
-        public async Task<IActionResult> ObterPessoaPorId(int Id)
-        {
-            return Json(await _IPessoa.GetEntityById(Id));
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> ObterPessoaPorId(int Id)
+        //{
+        //    return Json(await _IPessoa.GetEntityById(Id));
+        //}
 
-        [HttpPost("AdicionarPessoas")]
-        public async Task AdicionarPessoas(PessoaViewModel pessoa)
-        {
-            await _IPessoa.Add(pessoa);
-        }
+        //[HttpPost]
+        //public async Task AdicionarPessoas(PessoaViewModel pessoa)
+        //{
+        //    await _IPessoa.Add(pessoa);
+        //}
 
-        [HttpPost("AtualizarPessoas")]
-        public async Task AtualizarPessoas(PessoaViewModel pessoa)
-        {
-            await _IPessoa.Update(pessoa);
-        }
+        //[HttpPost]
+        //public async Task AtualizarPessoas(PessoaViewModel pessoa)
+        //{
+        //    await _IPessoa.Update(pessoa);
+        //}
 
-        [HttpPost("RemoverPessoas")]
-        public async Task RemoverPessoas(PessoaViewModel pessoa)
-        {
-            await _IPessoa.Delete(pessoa);
-        }
+        //[HttpPost]
+        //public async Task RemoverPessoas(PessoaViewModel pessoa)
+        //{
+        //    await _IPessoa.Delete(pessoa);
+        //}
     }
 }
