@@ -1,0 +1,28 @@
+﻿@if (ForCheckBox)
+{
+<div class="m-3">
+    <CascadingValue IsFixed="true" Value="this">@ChildContent</CascadingValue>
+</div>
+}
+else
+{
+<div class="row g-3 @InternalClass">
+    <CascadingValue IsFixed="true" Value="this">@ChildContent</CascadingValue>
+</div>
+}
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public bool IsNested { get; set; }
+
+    [Parameter]
+    public bool ForCheckBox { get; set; }
+
+    [Parameter]
+    public string Class { get; set; }
+
+    internal string InternalClass => (IsNested ? "" : "px-3 ") + Class;
+}

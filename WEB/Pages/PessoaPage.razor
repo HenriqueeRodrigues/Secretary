@@ -1,0 +1,49 @@
+﻿@page "/pessoapage"
+@using WEB.Components
+@using Model.Pessoa
+@inherits SecretaryPagebase
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+
+
+
+<div class="form-group" style="display:flex; justify-content:space-between;">
+    <span class="general-title">@Localizer["Pessoas"]</span>
+    <div>
+        <IconButton ButtonType="IconButtonType.Add" OnClick="() => Edit()" />
+        <IconButton ButtonType="IconButtonType.Delete" OnClick="() => RemoveCustomer()" />
+    </div>
+</div>
+
+
+<SearchResults TRowData="PessoaViewModel"
+               Items="@Pessoas.ToList()"
+               HasSelection="true"
+               Standalone="true">
+    <SearchResultsField TRowData="PessoaViewModel"
+                        Expression="x => x.Nome"
+                        Title=""
+                        row="0"
+                        col="0" />
+    <SearchResultsField TRowData="PessoaViewModel"
+                        Expression="x => string.Concat(x.Nome, (char)32, x.SobreNome).Trim()"
+                        Title="@Localizer["Nome Completo"]"
+                        row="1"
+                        col="0" />
+    <SearchResultsField TRowData="PessoaViewModel"
+                        Expression="x => x.Congregacao"
+                        Title="@Localizer["Congregaçao"]"
+                        row="1"
+                        col="0" />
+    <SearchResultsField TRowData="PessoaViewModel"
+                        Expression="x => x.Databatismo"
+                        Title="@Localizer["Batismo"]"
+                        row="1"
+                        col="1" />
+    <SearchResultsField TRowData="PessoaViewModel"
+                        Expression="x => x.Endereco"
+                        Title="@Localizer["Endereço"]"
+                        row="2"
+                        col="1" />
+
+</SearchResults>

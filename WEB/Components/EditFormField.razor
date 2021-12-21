@@ -1,0 +1,13 @@
+﻿<div class="@Class">
+    <CascadingValue IsFixed="true" Value="this">@ChildContent</CascadingValue>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public int Size { get; set; }
+
+    public string Class => "col-md-" + Size.ToString();
+}

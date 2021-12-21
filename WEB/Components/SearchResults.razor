@@ -1,0 +1,122 @@
+﻿@typeparam TRowData
+@using Microsoft.Extensions.Localization
+@using Model.Resources
+@using Model.Models
+
+<CascadingValue IsFixed="true" Value="this">@ChildContent</CascadingValue>
+
+<div class="@StandaloneClass">
+    @if (IncludeTotals)
+    {
+        <div class="ps-@Padding search-results-border-bottom">
+            @Localizer["Records found"]: @Items.Count
+        </div>
+    }
+
+    @if (Items != null)
+    {
+        var rowCount = 0;
+        foreach (var item in Items)
+        {
+            var oddBgClass = rowCount % 2 == 0 ? "search-results-odd-bg" : string.Empty;
+            rowCount++;
+
+            <div style="display: flex;" class="@oddBgClass">
+                @if (HasSelection)
+                {
+                    <div class="ps-3 pt-2 search-results-border-bottom">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="cb_@item.GetHashCode().ToString()" @bind="((ISelection)item).IsSelected">
+                            <label class="form-check-label" for="cb_@item.GetHashCode().ToString()"></label>
+                        </div>
+                    </div>
+                }
+
+                <div class="row m-0 py-2 search-results-border-bottom" style="width:100%">
+                    <div class="col-md-6 px-@Padding">
+                        @foreach (var field in fields.Where(x => x.col % 2 == 0).OrderBy(x => x.row))
+                        {
+                            if (item is IAction actionItem && actionItem.Action != null
+                                && field.row == 0 && field.col == 0)
+                            {
+                                <div class="@GetColClass(field.col) search-results-hyperlink" @onclick="actionItem.Action">
+                                    @field.Template(item)
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="@GetColClass(field.col)">
+                                    @field.Template(item)
+                                </div>
+
+                            }
+                        }
+                    </div>
+                    <div class="col-md-6 px-@Padding">
+                        @foreach (var field in fields.Where(x => x.col % 2 == 1).OrderBy(x => x.row))
+                        {
+                            <div class="@GetColClass(field.col)">
+                                @field.Template(item)
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public ICollection<TRowData> Items { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public bool HasSelection { get; set; }
+
+    [Parameter]
+    public bool IncludeTotals { get; set; }
+
+    [Parameter]
+    public int Padding { get; set; } = 2;
+
+    [Parameter]
+    public bool Standalone { get; set; }
+
+    [Inject]
+    public IStringLocalizer<Resources> Localizer { get; set; }
+
+    private readonly List<SearchResultsField<TRowData>> fields = new List<SearchResultsField<TRowData>>();
+
+    internal void AddField(SearchResultsField<TRowData> field)
+    {
+        if (field.col < 0 || field.col > 1)
+        {
+            return;
+        }
+
+        this.fields.Add(field);
+    }
+
+    internal string StandaloneClass => Standalone ? "search-results-border-top mt-2" : "";
+
+    internal string GetColClass(int col)
+    {
+        if (col % 2 == 1)
+        {
+            return "text-sm-start text-md-end";
+        }
+
+        return string.Empty;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            StateHasChanged();
+        }
+    }
+}

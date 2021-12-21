@@ -6,7 +6,10 @@ using Data.PessoaRepositorio;
 using Data.ProdutoRepositorio;
 using Data.RepositorioGenerico;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -45,7 +48,14 @@ namespace WebAPI
             services.AddSingleton<IPessoa, RepositorioPessoa>();
             services.AddSingleton<IProduto, RepositorioProduto>();
             services.AddDbContext<ContextBase>(x => x.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=Henrique;Trusted_Connection=True;", y => y.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)));
-            
+            services.AddScoped<AuthenticationStateProvider, ServerAuthenticationStateProvider>();
+            services.AddCors(policy => 
+            {
+                policy.AddPolicy("_myAllowSpecificOrigins", builder => builder.WithOrigins("https://localhost:44373")
+                 .AllowAnyMethod()
+                 .AllowAnyHeader()
+                 .AllowCredentials());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +73,8 @@ namespace WebAPI
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("_myAllowSpecificOrigins");
 
             app.UseRouting();
 

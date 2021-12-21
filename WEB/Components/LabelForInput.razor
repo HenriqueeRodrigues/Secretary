@@ -1,0 +1,15 @@
+﻿@using Model.Resources
+@using Microsoft.Extensions.Localization
+<label class="@Class">
+    @Text
+</label>
+@code {
+    [Parameter]
+    public string Text { get; set; }
+
+    [Parameter]
+    public string Class { get; set; } = "mb-0";
+
+    [Inject]
+    public IStringLocalizer<Resources> Localizer { get; set; }
+}

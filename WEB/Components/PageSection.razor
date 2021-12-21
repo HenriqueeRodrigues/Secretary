@@ -1,0 +1,67 @@
+﻿<section id="@Id">
+    <div class="page-section @SectionClass">
+        <div class="page-section-header @HeaderFilterClass">
+            @SectionName
+            <i class="@SectionIconClass" @onclick="() => ToggleSection()"></i>
+        </div>
+        <div class="@CollapseContentClass">
+            <div class="page-section-content @ContentFilterClass">
+                <CascadingValue IsFixed="true" Value="this">@ChildContent</CascadingValue>
+            </div>
+        </div>
+    </div>
+</section>
+<br />
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    [Parameter]
+    public string SectionName { get; set; }
+
+    [Parameter]
+    public bool IsCollapsed { get; set; }
+
+    [Parameter]
+    public bool IsFilter { get; set; }
+
+    [Parameter]
+    public bool EnforceMaxWidth { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    public bool IsSectionCollapsed { get; set; }
+
+    public string CollapseContentClass => IsSectionCollapsed ? "collapse" : "collapse show";
+
+    public string HeaderFilterClass => IsFilter ? "page-section-header-filter" : string.Empty;
+
+    public string ContentFilterClass => IsFilter ? "page-section-content-filter" : string.Empty;
+
+    public string SectionIconClass => IsSectionCollapsed ? "bi bi-chevron-down" : "bi bi-chevron-up";
+
+    public string SectionClass
+    {
+        get
+        {
+            var sectionClass = string.Empty;
+            if (EnforceMaxWidth)
+            {
+                sectionClass += "modal-max-width ";
+            }
+
+            return sectionClass;
+        }
+    }
+    public void ToggleSection()
+    {
+        IsSectionCollapsed = !IsSectionCollapsed;
+    }
+
+    protected override void OnInitialized()
+    {
+        IsSectionCollapsed = IsCollapsed;
+    }
+}

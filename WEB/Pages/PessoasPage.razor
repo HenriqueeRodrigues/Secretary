@@ -1,16 +1,51 @@
-﻿@page "/pessoaspage"
+﻿@*@page "/pessoaspage"
+@using WEB.Components
+@using Model.Models
 @inherits SecretaryPagebase
 
 
 
-<h1>Pessoa</h1>
+    <div class="form-group" style="display:flex; justify-content:space-between;">
+        <span class="general-title">@Localizer["Pessoas"]</span>
+        <div>
+            <IconButton ButtonType="IconButtonType.Add" OnClick="() => Edit()" />
+            <IconButton ButtonType="IconButtonType.Delete" OnClick="() => RemoveCustomer()" />
+        </div>
+    </div>
 
-<p>Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="Close">Click me</button>
-
-@code {
-    private int currentCount = 0;
-
-
-}
+   
+    <SearchResults TRowData="Customer"
+                   Items="@Customers.ToList()"
+                   HasSelection="true"
+                   Standalone="true">
+        <SearchResultsField TRowData="Customer"
+                            Expression="x => x.Name"
+                            Title=""
+                            row="0"
+                            col="0" />
+        <SearchResultsField TRowData="Customer"
+                            Expression="x => string.Concat(x.OwnerFirstName, (char)32, x.OwnerLastName).Trim()"
+                            Title="@Localizer["Contact"]"
+                            row="1"
+                            col="0" />
+        <SearchResultsField TRowData="Customer"
+                            Expression="x => x.Email"
+                            Title="@Localizer["Email"]"
+                            row="1"
+                            col="0" />
+        <SearchResultsField TRowData="Customer"
+                            Expression="x => x.Phone"
+                            Title="@Localizer["Phone"]"
+                            row="1"
+                            col="1" />
+        <SearchResultsField TRowData="Customer"
+                            Expression="x => x.Seller.Name"
+                            Title="@Localizer["Seller"]"
+                            row="2"
+                            col="1" />
+        <SearchResultsField TRowData="Customer"
+                            Expression="x => x.Contracts.Count()"
+                            Title="@Localizer["Contracts"]"
+                            row="2"
+                            col="1" />
+    </SearchResults>*@

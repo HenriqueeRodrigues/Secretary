@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept credit card" xml:space="preserve">
+    <value>Aceita cartão de crédito</value>
+  </data>
+  <data name="Accept direct" xml:space="preserve">
+    <value>Aceita pagamento direto</value>
+  </data>
+  <data name="Accept slip" xml:space="preserve">
+    <value>Aceita boleto</value>
+  </data>
+  <data name="AcceptCreditCard" xml:space="preserve">
+    <value>Permite cartão de crédito</value>
+  </data>
+  <data name="AcceptDirect" xml:space="preserve">
+    <value>Permite pagamento direto</value>
+  </data>
+  <data name="AcceptSlip" xml:space="preserve">
+    <value>Permite Boleto</value>
+  </data>
+  <data name="Access denied." xml:space="preserve">
+    <value>Acesso negado.</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Ação</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Ativar</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="AddressLine1" xml:space="preserve">
+    <value>Rua/Avenida</value>
+  </data>
+  <data name="AddressLine2" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="AddressLine3" xml:space="preserve">
+    <value>Complemento</value>
+  </data>
+  <data name="AdhesionValue" xml:space="preserve">
+    <value>Valor de adesão</value>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>Administrador</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="Annual" xml:space="preserve">
+    <value>Anual</value>
+  </data>
+  <data name="AnnualCharges" xml:space="preserve">
+    <value>Valor anual</value>
+  </data>
+  <data name="Are you sure you want to delete this record?" xml:space="preserve">
+    <value>Você tem certeza que deseja apagar esse registro?</value>
+  </data>
+  <data name="Bill" xml:space="preserve">
+    <value>Cobrança</value>
+  </data>
+  <data name="BillCompositionDisplay" xml:space="preserve">
+    <value>Composição da cobrança</value>
+  </data>
+  <data name="BillCompositionId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="BillCompositions" xml:space="preserve">
+    <value>Composição da cobrança</value>
+  </data>
+  <data name="BillId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Bills" xml:space="preserve">
+    <value>Cobrança</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>Bloquear</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Canceled" xml:space="preserve">
+    <value>Cancelado</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="ChargeType" xml:space="preserve">
+    <value>Tipo de cobrança</value>
+  </data>
+  <data name="ChargeTypeDescription" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="ChargeTypeId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="ChargeTypeName" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="ChargeTypes" xml:space="preserve">
+    <value>Tipos de cobrança</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="Closed" xml:space="preserve">
+    <value>Encerrado</value>
+  </data>
+  <data name="Companies" xml:space="preserve">
+    <value>Empresas</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="CompanyCode" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="CompanyId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Razão Social</value>
+  </data>
+  <data name="CompanyRepresentative" xml:space="preserve">
+    <value>Nome do responsável</value>
+  </data>
+  <data name="Company_CompanyCode_Duplicated" xml:space="preserve">
+    <value>O código que você escolheu já está em uso. Por favor, escolha outro código.</value>
+  </data>
+  <data name="Company_StartDateTime_GreaterThanToday" xml:space="preserve">
+    <value>A data de início não pode ser uma data futura.</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Confirmação</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contato</value>
+  </data>
+  <data name="ContactPhone1" xml:space="preserve">
+    <value>Telefone principal</value>
+  </data>
+  <data name="ContactPhone2" xml:space="preserve">
+    <value>Telefone alternativo</value>
+  </data>
+  <data name="Contract" xml:space="preserve">
+    <value>Contrato</value>
+  </data>
+  <data name="Contract date" xml:space="preserve">
+    <value>Data do contrato</value>
+  </data>
+  <data name="Contract items" xml:space="preserve">
+    <value>Itens do contrato</value>
+  </data>
+  <data name="ContractDate" xml:space="preserve">
+    <value>Data do contrato</value>
+  </data>
+  <data name="ContractEditPage_EmailNotSent" xml:space="preserve">
+    <value>Link não enviado</value>
+  </data>
+  <data name="ContractEditPage_EmailSent" xml:space="preserve">
+    <value>Link enviado por e-mail</value>
+  </data>
+  <data name="ContractEditPage_SeeSlip" xml:space="preserve">
+    <value>Ver o boleto</value>
+  </data>
+  <data name="ContractId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="ContractItem" xml:space="preserve">
+    <value>Item de contrato</value>
+  </data>
+  <data name="ContractItemCharge" xml:space="preserve">
+    <value>Cobrança do item de contrato</value>
+  </data>
+  <data name="ContractItemChargeId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="ContractItemChargeNotes" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="ContractItemCharges" xml:space="preserve">
+    <value>Cobranças do item de contrato</value>
+  </data>
+  <data name="ContractItemId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="ContractItemNotes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="ContractItems" xml:space="preserve">
+    <value>Itens de contrato</value>
+  </data>
+  <data name="ContractNotes" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="Contracts" xml:space="preserve">
+    <value>Contratos</value>
+  </data>
+  <data name="ContractStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Corporate" xml:space="preserve">
+    <value>Pessoa jurídica</value>
+  </data>
+  <data name="Corporate owner" xml:space="preserve">
+    <value>Pessoa de contato</value>
+  </data>
+  <data name="CountryCode" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Data de criação</value>
+  </data>
+  <data name="CreditCard" xml:space="preserve">
+    <value>Cartão</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="CustomerId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>Clientes</value>
+  </data>
+  <data name="CustomerSince" xml:space="preserve">
+    <value>Cliente desde</value>
+  </data>
+  <data name="DateFrom" xml:space="preserve">
+    <value>Data inicial</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>Data final</value>
+  </data>
+  <data name="DedicatedHours" xml:space="preserve">
+    <value>Horas dedicadas</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="Direct" xml:space="preserve">
+    <value>Direto</value>
+  </data>
+  <data name="DueDate" xml:space="preserve">
+    <value>Data de vencimento</value>
+  </data>
+  <data name="E-mail settings" xml:space="preserve">
+    <value>Configurações de e-mail</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Edit chargeType" xml:space="preserve">
+    <value>Editar tipo de cobrança</value>
+  </data>
+  <data name="Edit company" xml:space="preserve">
+    <value>Editar empresa</value>
+  </data>
+  <data name="Edit product" xml:space="preserve">
+    <value>Editar produto</value>
+  </data>
+  <data name="Edit reseller" xml:space="preserve">
+    <value>Editar franquia</value>
+  </data>
+  <data name="Edit seller" xml:space="preserve">
+    <value>Editar vendedor</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailSent" xml:space="preserve">
+    <value>E-mail enviado</value>
+  </data>
+  <data name="FantasyName" xml:space="preserve">
+    <value>Nome fantasia</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="General information" xml:space="preserve">
+    <value>Informações gerais</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inativo</value>
+  </data>
+  <data name="Individual" xml:space="preserve">
+    <value>Pessoa física</value>
+  </data>
+  <data name="InitialChargeDate" xml:space="preserve">
+    <value>1º vencimento em</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="IsDeleted" xml:space="preserve">
+    <value>Deletado</value>
+  </data>
+  <data name="IsMailProfileEnabled" xml:space="preserve">
+    <value>Ativar envio de e-mails</value>
+  </data>
+  <data name="IsRequired" xml:space="preserve">
+    <value>Obrigatório</value>
+  </data>
+  <data name="IsSelected" xml:space="preserve">
+    <value>Selecionado</value>
+  </data>
+  <data name="Item added successfully." xml:space="preserve">
+    <value>Item adicionado com sucesso.</value>
+  </data>
+  <data name="Item deleted successfully." xml:space="preserve">
+    <value>Item removido com sucessso.</value>
+  </data>
+  <data name="Jobs" xml:space="preserve">
+    <value>Rotinas</value>
+  </data>
+  <data name="Loading..." xml:space="preserve">
+    <value>Iniciando...</value>
+  </data>
+  <data name="MailProfileEmailAddress" xml:space="preserve">
+    <value>E-mail do perfil</value>
+  </data>
+  <data name="MailProfilePassword" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="MailProfileSenderName" xml:space="preserve">
+    <value>Nome do remetente</value>
+  </data>
+  <data name="MailProfileSmtpAddress" xml:space="preserve">
+    <value>Endereço do servidor</value>
+  </data>
+  <data name="MailProfileSmtpPort" xml:space="preserve">
+    <value>Porta</value>
+  </data>
+  <data name="MailProfileUserName" xml:space="preserve">
+    <value>Nome de usuário</value>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>Mensal</value>
+  </data>
+  <data name="MonthlyCharges" xml:space="preserve">
+    <value>Valor mensal</value>
+  </data>
+  <data name="MonthlyValue" xml:space="preserve">
+    <value>Valor mensal</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Negotiation" xml:space="preserve">
+    <value>Negociação</value>
+  </data>
+  <data name="Neighborhood" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Novo</value>
+  </data>
+  <data name="New chargeType" xml:space="preserve">
+    <value>Novo tipo de cobrança</value>
+  </data>
+  <data name="New company" xml:space="preserve">
+    <value>Nova empresa</value>
+  </data>
+  <data name="New contract" xml:space="preserve">
+    <value>Novo contrato</value>
+  </data>
+  <data name="New customer" xml:space="preserve">
+    <value>Novo Cliente</value>
+  </data>
+  <data name="New product" xml:space="preserve">
+    <value>Novo produto</value>
+  </data>
+  <data name="New reseller" xml:space="preserve">
+    <value>Nova franquia</value>
+  </data>
+  <data name="New seller" xml:space="preserve">
+    <value>Novo vendedor</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="No accept credit card" xml:space="preserve">
+    <value>Não aceita cartão de crédito</value>
+  </data>
+  <data name="No accept direct" xml:space="preserve">
+    <value>Não aceita pagamento direto</value>
+  </data>
+  <data name="No accept slip" xml:space="preserve">
+    <value>Não aceita boleto</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="Once" xml:space="preserve">
+    <value>Única</value>
+  </data>
+  <data name="OnceCharges" xml:space="preserve">
+    <value>Valor a vista</value>
+  </data>
+  <data name="OpeningDate" xml:space="preserve">
+    <value>Data de abertura</value>
+  </data>
+  <data name="Overdue" xml:space="preserve">
+    <value>Em atraso</value>
+  </data>
+  <data name="OwnerBirthDate" xml:space="preserve">
+    <value>Data de nascimento</value>
+  </data>
+  <data name="OwnerEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="OwnerFirstName" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="OwnerLastName" xml:space="preserve">
+    <value>Sobrenome</value>
+  </data>
+  <data name="OwnerPhone" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="OwnerTaxNumber" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="Page not found." xml:space="preserve">
+    <value>Página não encontrada.</value>
+  </data>
+  <data name="PayDate" xml:space="preserve">
+    <value>Data de pagamento</value>
+  </data>
+  <data name="Paid" xml:space="preserve">
+    <value>Pago</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>Forma de pagamento</value>
+  </data>
+  <data name="PaymentRecurrence" xml:space="preserve">
+    <value>Recorrência</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pendente</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>CEP</value>
+  </data>
+  <data name="Preparing" xml:space="preserve">
+    <value>Em preparação</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="ProductChargeTypeId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="ProductChargeTypes" xml:space="preserve">
+    <value>Tipos de cobrança do produto</value>
+  </data>
+  <data name="ProductId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Produtos</value>
+  </data>
+  <data name="ProductsCount" xml:space="preserve">
+    <value>Quantidade de produtos</value>
+  </data>
+  <data name="Records found" xml:space="preserve">
+    <value>Registros encontrados</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>Cadastros</value>
+  </data>
+  <data name="Reseller" xml:space="preserve">
+    <value>Franquia</value>
+  </data>
+  <data name="ResellerId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Resellers" xml:space="preserve">
+    <value>Franquias</value>
+  </data>
+  <data name="ResellersCount" xml:space="preserve">
+    <value>Quantidade de franquias</value>
+  </data>
+  <data name="Responsible seller" xml:space="preserve">
+    <value>Vendedor Responsável</value>
+  </data>
+  <data name="ResponsibleName" xml:space="preserve">
+    <value>Nome do responsável</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>Vendedor</value>
+  </data>
+  <data name="SellerId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Sellers" xml:space="preserve">
+    <value>Vendedores</value>
+  </data>
+  <data name="SellersCount" xml:space="preserve">
+    <value>Vendedores</value>
+  </data>
+  <data name="Slip" xml:space="preserve">
+    <value>Boleto</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Data inicial</value>
+  </data>
+  <data name="StartDateTime" xml:space="preserve">
+    <value>Data de início</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Situação</value>
+  </data>
+  <data name="Subcategory" xml:space="preserve">
+    <value>Subcategoria</value>
+  </data>
+  <data name="Successfully saved." xml:space="preserve">
+    <value>Salvo com sucesso.</value>
+  </data>
+  <data name="TaxNumber" xml:space="preserve">
+    <value>CPF/CNPJ</value>
+  </data>
+  <data name="TaxType" xml:space="preserve">
+    <value>Tipo de pessoa</value>
+  </data>
+  <data name="Terminate" xml:space="preserve">
+    <value>Encerrar</value>
+  </data>
+  <data name="TrainingValue" xml:space="preserve">
+    <value>Valor de treinamento</value>
+  </data>
+  <data name="Under construction." xml:space="preserve">
+    <value>Em construção.</value>
+  </data>
+  <data name="Unknown error" xml:space="preserve">
+    <value>Erro desconhecido</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Usuários</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bem vindo, </value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="Zoop authentication" xml:space="preserve">
+    <value>Autenticação do Zoop</value>
+  </data>
+  <data name="Zoop information" xml:space="preserve">
+    <value>Informações Zoop</value>
+  </data>
+  <data name="ZoopBoleto" xml:space="preserve">
+    <value>Zoop Boleto</value>
+  </data>
+  <data name="ZoopBoletoId" xml:space="preserve">
+    <value>Zoop BoletoId</value>
+  </data>
+  <data name="ZoopBoletoUrl" xml:space="preserve">
+    <value>Zoop BoletoUrl</value>
+  </data>
+  <data name="ZoopBuyer" xml:space="preserve">
+    <value>Zoop Buyer</value>
+  </data>
+  <data name="ZoopBuyerId" xml:space="preserve">
+    <value>Zoop BuyerId</value>
+  </data>
+  <data name="ZoopKey" xml:space="preserve">
+    <value>Zoop key</value>
+  </data>
+  <data name="ZoopMarketPlace" xml:space="preserve">
+    <value>Zoop MarketPlace</value>
+  </data>
+  <data name="ZoopMarketPlaceId" xml:space="preserve">
+    <value>Zoop marketplace_id</value>
+  </data>
+  <data name="ZoopSeller" xml:space="preserve">
+    <value>Zoop Seller</value>
+  </data>
+  <data name="ZoopSellerId" xml:space="preserve">
+    <value>Zoop SellerId</value>
+  </data>
+  <data name="ZoopTransaction" xml:space="preserve">
+    <value>Transação Zoop</value>
+  </data>
+  <data name="RequiredError" xml:space="preserve">
+    <value>O campo {0} é obrigatório.</value>
+  </data>
+  <data name="UniqueKeyViolationMessage" xml:space="preserve">
+    <value>{1} "{0}" já está em uso.</value>
+  </data>
+  <data name="CannotDeleteBecauseOfRelatedRecordMessage" xml:space="preserve">
+    <value>Não foi possível remover porque pelo menos um dos itens selecionados já está em uso.</value>
+  </data>
+  <data name="Company_Address_State_Invalid" xml:space="preserve">
+    <value>Endereço: Estado inválido.</value>
+  </data>
+  <data name="Company_Contact_Email_NotValid" xml:space="preserve">
+    <value>Contato: Endereço de e-mail inválido.</value>
+  </data>
+  <data name="Company_General_StartDateTime_GreaterThanToday" xml:space="preserve">
+    <value>Geral: A data de início não pode ser uma data futura.</value>
+  </data>
+  <data name="Company_MailProfile_Incomplete" xml:space="preserve">
+    <value>Configurações de e-mail: Configuração incompleta. Preencha todos os campos.</value>
+  </data>
+  <data name="Company_MailProfile_MailProfileEmailAddress_NotValid" xml:space="preserve">
+    <value>Configurações de e-mail: Endereço de e-mail inválido.</value>
+  </data>
+  <data name="Company_ZoopInformation_ZoopKeyIsMissing" xml:space="preserve">
+    <value>Autenticação do Zoop: Por favor, preencha o Zoop Key.</value>
+  </data>
+  <data name="Customer_Address_State_Invalid" xml:space="preserve">
+    <value>Endereço: Estado inválido.</value>
+  </data>
+  <data name="Customer_General_CustomerSince_GreaterThanToday" xml:space="preserve">
+    <value>Geral: 'Cliente desde' não pode ser uma data futura.</value>
+  </data>
+  <data name="Customer_General_Email_Duplicated" xml:space="preserve">
+    <value>Geral: Este e-mail já está em uso. Escolha outro e-mail.</value>
+  </data>
+  <data name="Customer_General_Email_NotValid" xml:space="preserve">
+    <value>Geral: Endereço de e-mail inválido.</value>
+  </data>
+  <data name="Customer_General_OwnerName_Incomplete" xml:space="preserve">
+    <value>Geral: Nome e sobrenome incompletos.</value>
+  </data>
+  <data name="Customer_Owner_Incomplete" xml:space="preserve">
+    <value>Pessoa de contato: Incompleto. Preencha todos os campos.</value>
+  </data>
+  <data name="Customer_Owner_OwnerBirthDate_GreaterThanToday" xml:space="preserve">
+    <value>Pessoa de contato: A data de nascimento não pode ser uma data futura.</value>
+  </data>
+  <data name="Customer_Owner_OwnerEmail_NotValid" xml:space="preserve">
+    <value>Pessoa de contato: Endereço de e-mail inválido.</value>
+  </data>
+  <data name="Product_ProductChargeTypes_NoProductChargeTypes" xml:space="preserve">
+    <value>É necessário definir pelo menos um tipo de cobrança para este produto.</value>
+  </data>
+  <data name="Reseller_Address_State_Invalid" xml:space="preserve">
+    <value>Endereço: Estado inválido.</value>
+  </data>
+  <data name="Reseller_General_Email_NotValid" xml:space="preserve">
+    <value>Geral: Endereço de e-mail inválido.</value>
+  </data>
+  <data name="Reseller_General_OpeningDate_GreaterThanToday" xml:space="preserve">
+    <value>Geral: A data de início não pode ser uma data futura.</value>
+  </data>
+  <data name="Reseller_Owner_Incomplete" xml:space="preserve">
+    <value>Pessoa de contato: Incompleto. Preencha todos os campos.</value>
+  </data>
+  <data name="Reseller_Owner_OwnerBirthDate_GreaterThanToday" xml:space="preserve">
+    <value>Pessoa de contato: A data de nascimento não pode ser uma data futura.</value>
+  </data>
+  <data name="Reseller_Owner_OwnerEmail_NotValid" xml:space="preserve">
+    <value>Pessoa de contato: Endereço de e-mail inválido.</value>
+  </data>
+  <data name="Seller_Address_State_Invalid" xml:space="preserve">
+    <value>Endereço: Estado inválido.</value>
+  </data>
+  <data name="Seller_General_Email_Duplicated" xml:space="preserve">
+    <value>Geral: Este e-mail já está em uso. Escolha outro e-mail.</value>
+  </data>
+  <data name="Seller_General_Email_NotValid" xml:space="preserve">
+    <value>Geral: Endereço de e-mail inválido.</value>
+  </data>
+  <data name="Reseller_Cnpj_NotValid" xml:space="preserve">
+    <value>O CNPJ inserido não é válido.</value>
+  </data>
+  <data name="Reseller_Cpf_NotValid" xml:space="preserve">
+    <value>O CPF inserido não é válido.</value>
+  </data>
+  <data name="Reseller_OwnerTaxNumber_Cpf_NotValid" xml:space="preserve">
+    <value>O CPF da pessoa de contato não é válido.</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Quantidade</value>
+  </data>
+  <data name="Contract_ContractItemUpdate_Success" xml:space="preserve">
+    <value>Item do contrato atualizado com sucesso.</value>
+  </data>
+  <data name="Edit contract item" xml:space="preserve">
+    <value>Editar item do contrato</value>
+  </data>
+  <data name="New contract item" xml:space="preserve">
+    <value>Novo item do contrato</value>
+  </data>
+  <data name="No contract items selected." xml:space="preserve">
+    <value>Não há itens de contrato selecionados.</value>
+  </data>
+  <data name="Download proposal" xml:space="preserve">
+    <value>Baixar orçamento</value>
+  </data>
+  <data name="DefaultValue" xml:space="preserve">
+    <value>Valor padrão</value>
+  </data>
+  <data name="Contract_Active_ContractItemsWithoutContractItemCharges" xml:space="preserve">
+    <value>Há itens do contrato com negociação incompleta. Verifique os itens de contrato antes de ativar.</value>
+  </data>
+  <data name="ContractItem_ContractItemCharge_MissingChargeType" xml:space="preserve">
+    <value>Selecione um Tipo de cobrança.</value>
+  </data>
+  <data name="ContractItem_ContractItemCharge_MissingChargeValue" xml:space="preserve">
+    <value>Defina um valor.</value>
+  </data>
+  <data name="ContractItem_ContractItemCharge_InitialChargeDateBeforeToday" xml:space="preserve">
+    <value>A data do 1º vencimento não pode ser anterior a hoje.</value>
+  </data>
+  <data name="Contract_Active_NoContractItemCharges" xml:space="preserve">
+    <value>Para ativar, é necessário definir pelo menos um item do contrato.</value>
+  </data>
+  <data name="Blocked" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+  <data name="ConcurrencyConflictMessage" xml:space="preserve">
+    <value>Você está tentando alterar um registro desatualizado. Por favor, atualize a página e tente novamente.</value>
+  </data>
+  <data name="IsLastSelectedCompany" xml:space="preserve">
+    <value>Última empresa selecionada</value>
+  </data>
+  <data name="Invalid login attempt." xml:space="preserve">
+    <value>Tentativa de login inválida.</value>
+  </data>
+  <data name="Passwords must have at least one lowercase ('a'-'z')." xml:space="preserve">
+    <value>As senhas devem ter pelo menos uma minúscula ('a' - 'z').</value>
+  </data>
+  <data name="Passwords must have at least one non alphanumeric character." xml:space="preserve">
+    <value>As senhas devem ter pelo menos um caractere não alfanumérico.</value>
+  </data>
+  <data name="Passwords must have at least one uppercase ('A'-'Z')." xml:space="preserve">
+    <value>As senhas devem ter pelo menos uma maiúscula ('A' - 'Z').</value>
+  </data>
+  <data name="Register_ComparePassword_PasswordsMismatch" xml:space="preserve">
+    <value>A senha e a senha de confirmação não correspondem.</value>
+  </data>
+  <data name="The Password field is required." xml:space="preserve">
+    <value>O campo de senha é necessária.</value>
+  </data>
+  <data name="User account locked out." xml:space="preserve">
+    <value>Conta de usuário bloqueada.</value>
+  </data>
+  <data name="User logged in" xml:space="preserve">
+    <value>Usuário conectado</value>
+  </data>
+  <data name="Username is already taken." xml:space="preserve">
+    <value>O nome de usuário já está em uso.</value>
+  </data>
+  <data name="Confirm password" xml:space="preserve">
+    <value>A senha e a senha de confirmação não correspondem.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="PasswordString" xml:space="preserve">
+    <value>O {0} deve ter pelo menos {2} e no máximo {1} caracteres.</value>
+  </data>
+  <data name="Remember-me" xml:space="preserve">
+    <value>Lembrar-se</value>
+  </data>
+  <data name="Register_PasswordRule_PasswordLength" xml:space="preserve">
+    <value>O {0} deve ter pelo menos {2} e no máximo {1} caracteres.</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Relatórios</value>
+  </data>
+  <data name="Reports_ReportName_ExpiredBills" xml:space="preserve">
+    <value>Pagamentos em atraso</value>
+  </data>
+  <data name="Reports_ReportName_ExpiredBills_Description" xml:space="preserve">
+    <value>Verifique quais são os contratos e clientes que estão em atraso.</value>
+  </data>
+  <data name="CustomerName" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="ResellerName" xml:space="preserve">
+    <value>Franquia</value>
+  </data>
+  <data name="SellerName" xml:space="preserve">
+    <value>Vendedor</value>
+  </data>
+  <data name="ContractNumber" xml:space="preserve">
+    <value>Número do contrato</value>
+  </data>
+  <data name="ExpiredBillsReport_NoExpiredBills" xml:space="preserve">
+    <value>Não há pagamentos em atraso</value>
+  </data>
+  <data name="ExpiredDays" xml:space="preserve">
+    <value>Dias de atraso</value>
+  </data>
+  <data name="What's new" xml:space="preserve">
+    <value>Novidades</value>
+  </data>
+  <data name="Edit installment plan" xml:space="preserve">
+    <value>Editar plano de parcelamento</value>
+  </data>
+  <data name="EditPage_Delete_ConfirmationQuestion_Female" xml:space="preserve">
+    <value>Tem certeza que deseja remover a(s) {0} {1} selecionada(s)?</value>
+  </data>
+  <data name="EditPage_Delete_ConfirmationQuestion_Male" xml:space="preserve">
+    <value>Tem certeza que deseja remover o(s) {0} {1} selecionado(s)?</value>
+  </data>
+  <data name="EditPage_Delete_Success_Female" xml:space="preserve">
+    <value>{0} removidas com sucesso.</value>
+  </data>
+  <data name="EditPage_Delete_Success_Male" xml:space="preserve">
+    <value>{0} removidos com sucesso.</value>
+  </data>
+  <data name="EditPage_Select_NoSelection" xml:space="preserve">
+    <value>Nenhum item selecionado.</value>
+  </data>
+  <data name="EditPage_Update_Success" xml:space="preserve">
+    <value>Alteração realizada com sucesso.</value>
+  </data>
+  <data name="InstallmentPlan" xml:space="preserve">
+    <value>Plano de parcelamento</value>
+  </data>
+  <data name="InstallmentPlanItems" xml:space="preserve">
+    <value>Parcelas e Juros</value>
+  </data>
+  <data name="InstallmentPlans" xml:space="preserve">
+    <value>Parcelamento</value>
+  </data>
+  <data name="InstallmentPlan_InstallmentPlanItems_DuplicatedNumber" xml:space="preserve">
+    <value>O plano de parcelamento não pode ter duas entradas com mesmo número de parcelas.</value>
+  </data>
+  <data name="InstallmentPlan_InstallmentPlanItems_NoNumbers" xml:space="preserve">
+    <value>O plano de parcelamento deve ter pelo menos uma entrada com número de parcelas.</value>
+  </data>
+  <data name="New installment plan" xml:space="preserve">
+    <value>Novo plano de parcelamento</value>
+  </data>
+  <data name="InstallmentPlanId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="InstallmentPlanItemId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="InstallmentPlanItem_Number" xml:space="preserve">
+    <value>Parcelas</value>
+  </data>
+  <data name="InstallmentPlanItem_Tax" xml:space="preserve">
+    <value>Taxa de Juros %</value>
+  </data>
+  <data name="IsDefault" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="SetAsDefault" xml:space="preserve">
+    <value>Marcar como padrão</value>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>Taxa</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="DefaultInstallmentPlan" xml:space="preserve">
+    <value>Plano de parcelamento padrão</value>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>Visualizar</value>
+  </data>
+  <data name="Only uncompleted" xml:space="preserve">
+    <value>Não completados</value>
+  </data>
+  <data name="Installment" xml:space="preserve">
+    <value>Parcelamento</value>
+  </data>
+  <data name="Search criteria" xml:space="preserve">
+    <value>Filtros de pesquisa</value>
+  </data>
+  <data name="InstallmentSelectedNumber" xml:space="preserve">
+    <value>Número de parcelas selecionado</value>
+  </data>
+  <data name="InstallmentValue" xml:space="preserve">
+    <value>Valor da parcela</value>
+  </data>
+  <data name="OnceTotalValue" xml:space="preserve">
+    <value>Valor a parcelar</value>
+  </data>
+  <data name="Choose a installment number" xml:space="preserve">
+    <value>Escolha o número de parcelas</value>
+  </data>
+  <data name="InstallmentTotalValue" xml:space="preserve">
+    <value>Valor corrigido</value>
+  </data>
+  <data name="Composed" xml:space="preserve">
+    <value>Composto</value>
+  </data>
+  <data name="FeeType" xml:space="preserve">
+    <value>Tipo de juros</value>
+  </data>
+  <data name="Simple" xml:space="preserve">
+    <value>Simples</value>
+  </data>
+  <data name="InstallmentNumber" xml:space="preserve">
+    <value>Parcela</value>
+  </data>
+  <data name="ContractItemEditPage_OnceInitialChargeDate_ChangeWillUpdateAllRecords" xml:space="preserve">
+    <value>A data selecionada é diferente do 1º vencimento das outras negociações desse contrato que são elegíveis para parcelamento. Se continuar, todos esses demais itens serão atualizados com essa data.</value>
+  </data>
+  <data name="ContractItemEditPage_ContractItemPaymentMethod_ChangeWillUpdateAllRecords" xml:space="preserve">
+    <value>A forma de pagamento selecionada é diferente das outras negociações desse contrato que são elegíveis para parcelamento. Se continuar, todos esses demais itens serão atualizados com essa forma de pagamento.</value>
+  </data>
+  <data name="TotalValue" xml:space="preserve">
+    <value>Valor total</value>
+  </data>
+  <data name="UnitValue" xml:space="preserve">
+    <value>Valor unitário</value>
+  </data>
+  <data name="No bills items selected." xml:space="preserve">
+    <value>Não há cobrança selecionada.</value>
+  </data>
+  <data name="Bill_ZoopTransaction_PayDate_Payment_already_Bill_ZoopTransaction_PayDate_Payment_already_made" xml:space="preserve">
+    <value>Você não pode marcar novamente como pago uma cobrança já paga. Selecione apenas cobranças pendentes.</value>
+  </data>
+  <data name="Bill_ZoopTransaction_ZoopIntegratedTransactionCannotBeChangedManually" xml:space="preserve">
+    <value>Transação integrada com Zoop não pode ser alterado manualmente.</value>
+  </data>
+  <data name="Bill_ZoopTransaction_PayDate_Payment_paid_out" xml:space="preserve">
+    <value>Situação alterada para pago com sucesso.</value>
+  </data>
+  <data name="No_bill_selected." xml:space="preserve">
+    <value>Nenhuma cobrança selecionada.</value>
+  </data>
+  <data name="MarkPaid" xml:space="preserve">
+    <value>Alterar Situação de pagamento</value>
+  </data>
+  <data name="Contract_Activate_ActivatedWithoutZoopIntegration" xml:space="preserve">
+    <value>O contrato foi ativado, mas houve algum problema na geração das transações na Zoop. Não se preocupe, tentaremos gerar as transações novamente mais tarde.</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="My profile" xml:space="preserve">
+    <value>Meu perfil</value>
+  </data>
+  <data name="Credit Card" xml:space="preserve">
+    <value>Cartão de crédito</value>
+  </data>
+  <data name="CurrentCreditCard" xml:space="preserve">
+    <value>Cartão de crédito em uso</value>
+  </data>
+  <data name="MyProfile_CreditCard_AddNewCard" xml:space="preserve">
+    <value>Adicionar cartão de crédito</value>
+  </data>
+  <data name="MyProfile_CreditCard_RemoveCard" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="MyProfile_CreditCard_ReplaceCard" xml:space="preserve">
+    <value>Substituir</value>
+  </data>
+  <data name="CardNumber" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="CreditCardFinalNumber" xml:space="preserve">
+    <value>Números finais do Cartão de Crédito</value>
+  </data>
+  <data name="ExpirationMonth" xml:space="preserve">
+    <value>Mês</value>
+  </data>
+  <data name="ExpirationYear" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="HolderName" xml:space="preserve">
+    <value>Nome do títular no cartão</value>
+  </data>
+  <data name="LastCompany" xml:space="preserve">
+    <value>Última empresa selecionada</value>
+  </data>
+  <data name="NewCreditCard" xml:space="preserve">
+    <value>Novo cartão de crédito</value>
+  </data>
+  <data name="SecurityCode" xml:space="preserve">
+    <value>Código de verificação CVV</value>
+  </data>
+  <data name="UserProfileId" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>Data de expiração</value>
+  </data>
+  <data name="Credit card data" xml:space="preserve">
+    <value>Dados do cartão</value>
+  </data>
+  <data name="Insert new credit card" xml:space="preserve">
+    <value>Inserir novo cartão de crédito</value>
+  </data>
+  <data name="CardTransactionToken" xml:space="preserve">
+    <value>Token de transação de cartão</value>
+  </data>
+</root>

@@ -1,0 +1,159 @@
+﻿@typeparam TRowData
+@using System.Linq.Expressions
+@using Humanizer
+@using Microsoft.Extensions.Localization
+@using Model.Resources
+@code {
+    [CascadingParameter]
+    public SearchResults<TRowData> OwnerSearchResults { get; set; }
+
+    [Inject]
+    public IStringLocalizer<Resources> Localizer { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public Expression<Func<TRowData, object>> Expression { get; set; }
+
+    [Parameter]
+    public string Format { get; set; }
+
+    [Parameter]
+    public string ValueClass { get; set; }
+
+    [Parameter]
+    public int row { get; set; }
+
+    [Parameter]
+    public int col { get; set; }
+
+    [Parameter]
+    public Expression<Func<TRowData, object>> HrefExpression { get; set; }
+
+    [Parameter]
+    public bool HrefNewTab { get; set; }
+
+    [Parameter]
+    public RenderFragment<TRowData> ChildContent { get; set; }
+
+    private Func<TRowData, object> compiledExpression;
+    private Expression lastCompiledExpression;
+    private Func<TRowData, object> compiledHrefExpression;
+    private Expression lastCompiledHrefExpression;
+    private RenderFragment<TRowData> template;
+
+    // Add the column to the parent Grid component.
+    // OnInitialized is called only once in the component lifecycle
+    protected override void OnInitialized()
+    {
+        OwnerSearchResults.AddField(this);
+    }
+
+    protected override void OnParametersSet()
+    {
+        if (lastCompiledExpression != Expression)
+        {
+            compiledExpression = Expression?.Compile();
+            lastCompiledExpression = Expression;
+        }
+
+        if (lastCompiledHrefExpression != HrefExpression)
+        {
+            compiledHrefExpression = HrefExpression?.Compile();
+            lastCompiledHrefExpression = HrefExpression;
+        }
+    }
+
+    internal RenderFragment<TRowData> Template
+    {
+        get
+        {
+            return template ??= (rowData => builder =>
+            {
+
+                var title = Title;
+                if (title == null && Expression != null)
+                {
+                    // Decamelize the property name (requires Humanizer.Core NuGet package). Add the following line in the csproj:
+                    // <PackageReference Include="Humanizer.Core" Version="2.8.26" />
+                    title = GetMemberName(Expression).Humanize();
+
+                    // If you don't want to decamelize the name you can use the following code instead of the previous line
+                    //title = GetMemberName(Expression);
+                }
+
+                builder.AddContent(1, title == string.Empty ? Localizer[title] : Localizer[title] + ": ");
+
+                if (HrefExpression != null)
+                {
+                    builder.OpenElement(0, "a");
+                    builder.AddAttribute(1, "class", "search-results-hyperlink");
+                    if (compiledHrefExpression != null)
+                    {
+                        var value = compiledHrefExpression(rowData);
+                        builder.AddAttribute(2, "href", value);
+
+                        if (HrefNewTab)
+                        {
+                            builder.AddAttribute(3, "target", "_blank");
+                        }
+                    }
+                    else
+                    {
+                        builder.AddContent(4, ChildContent, rowData);
+                    }
+                }
+
+                if (!string.IsNullOrWhiteSpace(ValueClass))
+                {
+                    builder.OpenElement(1, "text");
+                    builder.AddAttribute(1, "class", ValueClass);
+                }
+
+                if (compiledExpression != null)
+                {
+                    var value = compiledExpression(rowData);
+                    var formattedValue = string.IsNullOrEmpty(Format) ? value?.ToString() : string.Format("{0:" + Format + "}", value);
+
+                    formattedValue ??= string.Empty;
+
+                    if (formattedValue.Contains("<text class"))
+                    {
+                        builder.AddMarkupContent(2, formattedValue);
+                    }
+                    else
+                    {
+                        builder.AddContent(2, formattedValue);
+                    }
+                }
+                else
+                {
+                    builder.AddContent(3, ChildContent, rowData);
+                }
+
+                if (!string.IsNullOrWhiteSpace(ValueClass))
+                {
+                    builder.CloseElement();
+                }
+
+                if (HrefExpression != null)
+                {
+                    builder.CloseElement();
+                }
+            });
+        }
+    }
+
+    // Get the Member name from an expression.
+    // (customer => customer.Name) returns "Name"
+    private static string GetMemberName<T>(Expression<T> expression)
+    {
+        return expression.Body switch
+        {
+            MemberExpression m => m.Member.Name,
+            UnaryExpression u when u.Operand is MemberExpression m => m.Member.Name,
+            _ => throw new NotSupportedException("Expression of type '" + expression.GetType().ToString() + "' is not supported")
+        };
+    }
+}

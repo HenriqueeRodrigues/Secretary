@@ -1,0 +1,86 @@
+﻿@using Microsoft.Extensions.Localization
+@using Model.Resources
+
+<button type="@HtmlType" class="@Class" @onclick="@OnClick" title="@Tooltip" disabled="@IsDisabled">
+    <i class="@IconClass" />
+</button>
+
+@code {
+    [Parameter]
+    public string Class { get; set; } = "btn btn-primary btn-icon";
+
+    [Parameter]
+    public IconButtonType ButtonType { get; set; }
+
+    [Parameter]
+    public string HtmlType { get; set; }
+
+    [Parameter]
+    public EventCallback OnClick { get; set; }
+
+    [Parameter]
+    public bool IsDisabled { get; set; }
+
+    [Inject]
+    public IStringLocalizer<Resources> Localizer { get; set; }
+
+    private string IconClass
+    {
+        get
+        {
+            switch (ButtonType)
+            {
+                case IconButtonType.Add:
+                    return "bi bi-plus-lg";
+
+                case IconButtonType.Delete:
+                    return "bi bi-trash";
+
+                case IconButtonType.Edit:
+                    return "bi bi-pencil-square";
+
+                case IconButtonType.Save:
+                    return "bi bi-check-lg";
+
+                case IconButtonType.Search:
+                    return "bi bi-search";
+
+                case IconButtonType.MarkPaid:
+                    return "bi bi-currency-dollar";
+
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+    }
+
+    private string Tooltip
+    {
+        get
+        {
+            switch (ButtonType)
+            {
+                case IconButtonType.Add:
+                    return Localizer["Add"];
+
+                case IconButtonType.Delete:
+                    return Localizer["Delete"];
+
+                case IconButtonType.Edit:
+                    return Localizer["Edit"];
+
+                case IconButtonType.Save:
+                    return Localizer["Save"];
+
+                case IconButtonType.Search:
+                    return Localizer["Search"];
+
+                case IconButtonType.MarkPaid:
+                    return Localizer["MarkPaid"];
+
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+    }
+}
